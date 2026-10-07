@@ -14,7 +14,7 @@
 <p align="right">Выполнил:</p>
 <p align="right">Студент 2 курса</p>
 <p align="right">Группы ИИ-30</p>
-<p align="right">________________</p>
+<p align="right">Кондратчик Н.И.</p>
 <p align="right">Проверил:</p>
 <p align="right">Дворанинович Д. А.</p>
 
@@ -194,6 +194,15 @@ classDiagram
     Model <|-- Model2_6
     Model <|-- Model3_9
 ```
+# Пример работы 1.9
+![](work.png)
+![](model1.9.png)
+# Пример работы 2.6
+![](work3.png)
+![](model2.6.png)
+# Пример работы 3.9
+![](work2.png)
+![](model3.9.png)
 
 # Вывод
 
