@@ -13,7 +13,7 @@
 
 <p align="right">Выполнил:</p>
 <p align="right">Студент 2 курса</p>
-<p align="right">Группы ИИ-30</p>
+<p align="right">Группы ИИ-29</p>
 <p align="right">Кондратчик Н.И.</p>
 <p align="right">Проверил:</p>
 <p align="right">Дворанинович Д. А.</p>
