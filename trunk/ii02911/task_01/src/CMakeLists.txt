@@ -11,6 +11,6 @@ add_executable(otis_task_01_ii02911
     InputSignal.cpp
 )
 
-target_include_directories(otis_task_01 PRIVATE
+target_include_directories(otis_task_01_ii02911 PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
