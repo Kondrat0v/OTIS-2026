@@ -1,10 +1,11 @@
+
 #pragma once
 
-enum class SignalType
+enum class SignalType : int
 {
     Step = 1,
-    Impulse = 2,
-    Harmonic = 3
+    Impulse,
+    Harmonic
 };
 
-double getInput(SignalType type, int tau, double amplitude);
+double getInput(const SignalType signal, const int time, const double amplitude);
