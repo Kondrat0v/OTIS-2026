@@ -9,17 +9,12 @@ Model3_9::Model3_9(double b)
 
 double Model3_9::calculateNext(
     double y,
-    double /*yPrev*/,
-    double /*yPrev2*/,
+    double,
+    double,
     double u,
     double dt
 ) const
 {
-    // Differential equation:
-    // dy/dt = b*tanh(u)
-    //
-    // Euler method:
-    // y(t+1) = y(t) + dt*b*tanh(u(t))
     return y + dt * b * std::tanh(u);
 }
 
