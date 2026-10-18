@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -5,7 +6,6 @@
 #include <cmath>
 #include <cstdlib>
 #include <clocale>
-#include <string>
 
 #include "Model.h"
 #include "Model1_9.h"
@@ -15,7 +15,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     setlocale(LC_ALL, "");
 
     int choice;
@@ -78,7 +79,7 @@ int main() {
 
         cout << "Enter time step dt: ";
 
-        if (!(cin >> dt) || !std::isfinite(dt) || dt <= 0.0) {
+        if (!(cin >> dt) || !isfinite(dt) || dt <= 0.0) {
             cout << "Error: dt must be a positive finite number.\n";
             return 1;
         }
@@ -112,7 +113,7 @@ int main() {
 
     cout << "Enter signal amplitude: ";
 
-    if (!(cin >> amplitude) || !std::isfinite(amplitude)) {
+    if (!(cin >> amplitude) || !isfinite(amplitude)) {
         cout << "Error: amplitude must be a finite number.\n";
         return 1;
     }
@@ -149,7 +150,7 @@ int main() {
         double nextY =
             model->calculateNext(y, yPrev, yPrev2, u, dt);
 
-        if (!std::isfinite(nextY)) {
+        if (!isfinite(nextY)) {
             cout << "Error: model produced an invalid result.\n";
             file.close();
             return 1;
