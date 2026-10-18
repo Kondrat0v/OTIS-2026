@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -86,6 +85,10 @@ int main() {
 
         model = make_unique<Model3_9>(b);
         break;
+
+    default:
+        cout << "Error: unknown model.\n";
+        return 1;
     }
 
     int signalChoice;
@@ -169,9 +172,8 @@ int main() {
     cout << "Results saved to result.csv.\n";
     cout << "Generating plot...\n";
 
-    int plotResult = system("python plot.py");
-
-    if (plotResult != 0) {
+    if (const auto plotResult = system("python plot.py");
+        plotResult != 0) {
         cout << "Could not generate the plot.\n";
         cout << "Check Python, matplotlib and the location of plot.py.\n";
     }
