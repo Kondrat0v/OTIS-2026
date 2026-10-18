@@ -1,10 +1,9 @@
-
 #pragma once
 
 class Model
 {
 public:
-    virtual ~Model() {}
+    virtual ~Model() = default;
 
     virtual double calculateNext(
         const double currentValue,
