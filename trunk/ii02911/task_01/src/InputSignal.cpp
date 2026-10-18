@@ -1,4 +1,3 @@
-
 #include "InputSignal.h"
 #include <cmath>
 
@@ -18,7 +17,7 @@ double getInput(SignalType type, int tau, double amplitude)
     if (type == SignalType::Harmonic)
     {
         double time = static_cast<double>(tau);
-        double value = std::sin(time);
+        auto value = std::sin(time);
         return amplitude * value;
     }
 
