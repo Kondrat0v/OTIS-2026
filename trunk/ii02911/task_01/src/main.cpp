@@ -173,11 +173,10 @@ int main()
     cout << "Results saved to result.csv.\n";
     cout << "Generating plot...\n";
 
-    if (const auto plotResult = system("python plot.py");
-        plotResult != 0) {
-        cout << "Could not generate the plot.\n";
-        cout << "Check Python, matplotlib and the location of plot.py.\n";
-    }
+    if (auto plotResult = system("python plot.py"); plotResult != 0) {
+    cout << "Could not generate the plot.\n";
+    cout << "Check Python, matplotlib and the location of plot.py.\n";
+}
 
     return 0;
 }
