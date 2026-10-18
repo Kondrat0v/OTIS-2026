@@ -108,7 +108,7 @@ int main()
         return 1;
     }
 
-    SignalType signalType =
+    auto signalType =
         static_cast<SignalType>(signalChoice);
 
     cout << "Enter signal amplitude: ";
