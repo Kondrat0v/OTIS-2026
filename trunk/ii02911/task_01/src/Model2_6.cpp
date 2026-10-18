@@ -8,13 +8,11 @@ Model2_6::Model2_6(double a1, double a2, double b)
 double Model2_6::calculateNext(
     double y,
     double yPrev,
-    double /*yPrev2*/,
+    double,
     double u,
-    double /*dt*/
+    double
 ) const
 {
-    // Model 2.6:
-    // y(t+1) = a1*y(t)^3 - a2*y(t-1) + b*u(t)^2
     return a1 * y * y * y - a2 * yPrev + b * u * u;
 }
 
