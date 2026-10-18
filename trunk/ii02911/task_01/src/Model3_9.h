@@ -8,7 +8,7 @@ private:
     double b;
 
 public:
-    Model3_9(double b);
+    explicit Model3_9(double b);
 
     double calculateNext(
         double y,
