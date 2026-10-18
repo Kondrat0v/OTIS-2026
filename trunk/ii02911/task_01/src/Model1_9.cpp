@@ -10,7 +10,7 @@ double Model1_9::calculateNext(
     double yPrev,
     double yPrev2,
     double u,
-    double /*dt*/
+    double 
 ) const
 {
     return a1 * y + a2 * yPrev + a3 * yPrev2 + b1 * u;
