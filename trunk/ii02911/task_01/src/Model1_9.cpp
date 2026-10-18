@@ -13,8 +13,6 @@ double Model1_9::calculateNext(
     double /*dt*/
 ) const
 {
-    // Model 1.9:
-    // y(t+1) = a1*y(t) + a2*y(t-1) + a3*y(t-2) + b1*u(t)
     return a1 * y + a2 * yPrev + a3 * yPrev2 + b1 * u;
 }
 
