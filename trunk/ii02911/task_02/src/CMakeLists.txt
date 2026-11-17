@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.5.0)
+cmake_minimum_required(VERSION 3.10.0)
+
+# Эту переменную нужно объявить в самом начале, до project() и FetchContent
+set(CMAKE_POLICY_VERSION_MINIMUM 3.10.0 CACHE STRING "" FORCE)
 
 if(POLICY CMP0135)
     cmake_policy(SET CMP0135 NEW)
@@ -18,7 +21,6 @@ FetchContent_Declare(
     URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE
 )
-set(CMAKE_POLICY_VERSION_MINIMUM 3.5.0 CACHE STRING "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # Ядро логики: модели и сигналы из task_01 + новые модули task_02
