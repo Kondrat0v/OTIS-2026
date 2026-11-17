@@ -9,7 +9,7 @@ echo   OTIS Task 02: Build, Test and Coverage
 echo ========================================
 
 if not exist build (
-    cmake -S . -B build -G "MinGW Makefiles"
+    cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     if errorlevel 1 (
         echo [ERROR] CMake configuration failed!
         pause
