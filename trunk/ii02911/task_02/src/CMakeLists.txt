@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.16)
-
 # Эту переменную нужно объявить в самом начале, до project() и FetchContent
 set(CMAKE_POLICY_VERSION_MINIMUM 3.16 CACHE STRING "" FORCE)
 
