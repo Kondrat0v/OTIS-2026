@@ -1,3 +1,4 @@
+
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include <stdexcept>
@@ -24,10 +25,6 @@ TEST(SimulatorMockTest, UsesMockedSignalSequenceDuringSimulation)
     EXPECT_CALL(mockSignal, sample(2, 2.0)).WillOnce(Return(0.0));
     EXPECT_CALL(mockSignal, sample(3, 2.0)).WillOnce(Return(1.0));
 
-    // t=0: y=0
-    // t=1: y = 0.5*0 + 1.0*2.0 = 2.0
-    // t=2: y = 0.5*2.0 + 1.0*0.0 = 1.0
-    // t=3: y = 0.5*1.0 + 1.0*1.0 = 1.5
     const auto history = Simulator::run(model, mockSignal, 3, 2.0, 0.1, 0.0);
 
     ASSERT_EQ(history.size(), 4u);
