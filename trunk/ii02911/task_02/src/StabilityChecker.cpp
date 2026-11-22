@@ -11,12 +11,10 @@ bool StabilityChecker::isModel1_9Stable(double a1, double a2, double a3)
     const double p1 = -a2;
     const double p0 = -a3;
 
-    const double p_at_1 = 1.0 + p2 + p1 + p0;
-    if (p_at_1 <= 0.0)
+    if (const double p_at_1 = 1.0 + p2 + p1 + p0; p_at_1 <= 0.0)
         return false;
 
-    const double p_at_minus_1 = 1.0 - p2 + p1 - p0;
-    if (p_at_minus_1 <= 0.0)
+    if (const double p_at_minus_1 = 1.0 - p2 + p1 - p0; p_at_minus_1 <= 0.0)
         return false;
 
     if (std::abs(p0) >= 1.0)
